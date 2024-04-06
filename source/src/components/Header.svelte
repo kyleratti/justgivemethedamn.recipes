@@ -15,13 +15,18 @@
 	};
 </script>
 
-<div class="header header-fixed unselectable header-animated px-1">
+<div class="header header-fixed unselectable header-animated px-1" id="top">
 	<div class="header-brand">
 		<div class="nav-item no-hover">
 			<h6 class="title">JustGiveMeTheDamn<span class="text-red-500">.Recipes</span></h6>
 		</div>
-		<a bind:this={headerBtn} on:click={onHeaderButtonClick} class="nav-item nav-btn"
-			 id="header-btn"><span></span> <span></span> <span></span></a>
+		<a href="#top"
+			 bind:this={headerBtn}
+			 on:click={onHeaderButtonClick}
+			 class="nav-item nav-btn"
+			 id="header-btn">
+			<span></span> <span></span> <span></span>
+		</a>
 	</div>
 	<div bind:this={headerMenu} class="header-nav" id="header-menu" role="button">
 		<div class="nav-left">
