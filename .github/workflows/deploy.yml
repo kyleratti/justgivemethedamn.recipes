@@ -24,6 +24,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           project_id: "JustGiveMeTheDamnRecipes"
           release_tag: ${{ github.event.inputs.release_tag }}
+          repo_source_directory: ./source
           ssh_deploy_host: ${{ secrets.SSH_DEPLOY_HOST }}
           ssh_deploy_port: ${{ secrets.SSH_DEPLOY_PORT }}
           ssh_deploy_user: ${{ secrets.SSH_DEPLOY_USER }}
