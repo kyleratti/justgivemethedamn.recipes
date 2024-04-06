@@ -10,7 +10,7 @@ on:
 
 # Allow one run of this workflow per branch and cancel existing runs if triggered again
 concurrency:
-  group: JustGiveMeTheDamnRecipes-test-${{ github.ref }}
+  group: JustGiveMeTheDamnRecipes-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
