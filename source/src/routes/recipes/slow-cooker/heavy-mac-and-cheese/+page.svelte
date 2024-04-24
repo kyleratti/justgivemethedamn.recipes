@@ -8,11 +8,29 @@
 		prepTimeMinutes: 30,
 		cookTimeMinutes: 60 * 3,
 		ingredients: [
-			{ kind: "exact", quantity: 1, unit: "pound", name: "Pasta", notes: "Use quality, name-brand pasta." },
+			{
+				kind: "exact",
+				quantity: 1,
+				unit: "pound",
+				name: "Pasta",
+				notes: "Use quality, name-brand pasta. Cheap pasta may cook too quickly.",
+			},
 			{ kind: "exact", quantity: 2.5, unit: "cup", name: "Milk", notes: "Ideally whole." },
 			{ kind: "exact", quantity: 12, unit: "ounce", name: "Evaporated milk" },
-			{ kind: "exact", quantity: 12, unit: "ounce", name: "Sharp cheddar cheese", notes: "Shredded." },
-			{ kind: "exact", quantity: 4, unit: "ounce", name: "American or Monterry cheese", notes: "Shredded." },
+			{
+				kind: "exact",
+				quantity: 12,
+				unit: "ounce",
+				name: "Sharp cheddar cheese",
+				notes: "Shredded.",
+			},
+			{
+				kind: "exact",
+				quantity: 4,
+				unit: "ounce",
+				name: "American or Monterry cheese",
+				notes: "Shredded.",
+			},
 			{ kind: "exact", quantity: 1, unit: "teaspoon", name: "Salt" },
 			{ kind: "exact", quantity: 0.5, unit: "teaspoon", name: "Black pepper" },
 			{ kind: "exact", quantity: 0.25, unit: "teaspoon", name: "Garlic powder" },
@@ -29,20 +47,27 @@
 			{ description: "Remove lid and stir." },
 			{
 				description: "Cook on low heat for additional 1-2 hours until warm and tender.",
-				notes: "Actual cook time will depend heavily on what type of pasta is used. Large pasta shapes will take longer to cook.",
+				notes:
+					"Actual cook time will depend heavily on what type of pasta is used. Large pasta shapes will take longer to cook.",
 			},
 		],
 	};
 </script>
 
-<h2>Heavy Mac and Cheese</h2>
+<h2 class="mb-2 text-2xl font-bold">Heavy Mac and Cheese</h2>
 
 <p>This is a delicious Mac and Cheese made in a slow cooker.</p>
 
-<p><b>Note:</b> This is a very "heavy" meal and is very filling. I recommend serving this as a side dish.</p>
+<p>
+	<b>Note:</b> This is a very "heavy" meal and is very filling. I recommend serving this as a side dish.
+</p>
 
 <RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
 
-<IngredientsList ingredients={recipe.ingredients} />
+<div class="mt-4">
+	<IngredientsList ingredients={recipe.ingredients} />
+</div>
 
-<StepsList steps={recipe.steps} />
+<div class="mt-4">
+	<StepsList steps={recipe.steps} />
+</div>

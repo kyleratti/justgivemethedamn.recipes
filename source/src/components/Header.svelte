@@ -1,53 +1,60 @@
 <script lang="ts">
-	let headerBtn: HTMLElement;
-	let headerMenu: HTMLElement;
+	import { classes } from "$lib/classesUtil";
+	import { onMount } from "svelte";
 
-	const onHeaderButtonClick = () => {
-		const isActive = headerBtn.classList.toggle("active");
-		headerMenu.classList.toggle("active", isActive);
-	};
+	let isMenuOpen = false;
 
-	const onHeaderMenuClick = (event: MouseEvent) => {
-		if (event.target instanceof HTMLAnchorElement) {
-			headerBtn.classList.remove("active");
-			headerMenu.classList.remove("active");
-		}
+	const toggleMenu = () => {
+		isMenuOpen = !isMenuOpen;
 	};
 </script>
 
-<div class="header header-fixed unselectable header-animated px-1" id="top">
-	<div class="header-brand">
-		<div class="nav-item no-hover">
-			<h6 class="title">JustGiveMeTheDamn<span class="text-red-500">.Recipes</span></h6>
-		</div>
-		<a href="#top"
-			 bind:this={headerBtn}
-			 on:click={onHeaderButtonClick}
-			 class="nav-item nav-btn"
-			 id="header-btn">
-			<span></span> <span></span> <span></span>
+<nav class="sticky top-0 z-50 bg-white p-2" id="top">
+	<div class="flex justify-between">
+		<a class="text-lg font-bold text-black hover:text-gray-500 md:text-2xl" href="/">
+			JustGiveMeTheDamn<span class="text-red-500">.Recipes</span>
 		</a>
-	</div>
-	<div bind:this={headerMenu} class="header-nav" id="header-menu" role="button">
-		<div class="nav-left">
-			<div class="nav-item text-center">
-				<a href="#top">
-					<span class="icon"> <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i></span>
-				</a>
-			</div>
+		<div class="hidden md:flex">
+			<ul class="flex flex-col">
+				<li>
+					<a href="/recipes/slow-cooker" class="px-2 py-1 font-bold text-black hover:text-gray-500"
+						>Slow Cooker Recipes</a
+					>
+				</li>
+			</ul>
 		</div>
-		<div class="nav-right">
-			<div class="nav-item has-sub toggle-hover" id="dropdown">
-				<a class="nav-dropdown-link" href="#top" on:click={event => event.preventDefault()}>Slow Cooker</a>
-				<ul class="dropdown-menu dropdown-animated" role="menu">
-					<li role="menuitem">
-						<a href="/recipes/slow-cooker/heavy-mac-and-cheese"
-							 on:click={onHeaderMenuClick}>
-							Heavy Mac and Cheese
-						</a>
-					</li>
-				</ul>
-			</div>
+		<div class="inline-block md:hidden">
+			<button
+				class="flex items-center rounded border border-black px-3 py-2 text-black hover:border-gray-500 hover:text-gray-500"
+				on:click={toggleMenu}
+			>
+				<svg class="h-3 w-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
 		</div>
 	</div>
-</div>
+	<div
+		class={classes("slide-down relative block text-right md:hidden", {
+			["top-[0]"]: isMenuOpen,
+			["top-[-250px]"]: !isMenuOpen,
+		})}
+	>
+		<ul class="mt-4 flex flex-col">
+			<li>
+				<a
+					href="/recipes/slow-cooker"
+					on:click={toggleMenu}
+					class="px-2 py-1 font-bold text-black hover:text-gray-500">Slow Cooker Recipes</a
+				>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<style lang="postcss">
+	.slide-down {
+		transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+	}
+</style>

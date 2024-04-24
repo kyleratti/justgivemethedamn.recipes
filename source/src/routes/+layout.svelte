@@ -5,9 +5,8 @@
 
 <Header />
 
-<section class="section">
-	<div class="space space--xl"></div>
-	<div class="content px-1 px-0-md">
+<section class="p-2 md:p-4">
+	<div class="mx-auto w-full lg:max-w-screen-md">
 		<slot />
 	</div>
 </section>

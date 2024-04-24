@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Ingredient, IngredientUnit } from "$lib/types";
 	import InlineIngredientUnit from "$components/InlineIngredientUnit.svelte";
+	import { classes } from "$lib/classesUtil";
 
 	export let ingredient: Ingredient = {} as Ingredient;
 
@@ -44,9 +45,12 @@
 </script>
 
 <div class="form-ext-control form-ext-checkbox my-1">
-	<input id="ingredient-check--{ingredientHtmlName}" class="form-ext-input form-ext-input--success"
-				 type="checkbox" />
-	<label class="form-ext-label" for="ingredient-check--{ingredientHtmlName}">
+	<input
+		id="ingredient-check--{ingredientHtmlName}"
+		class="peer has-[:checked]:line-through"
+		type="checkbox"
+	/>
+	<label class="peer-checked:line-through" for="ingredient-check--{ingredientHtmlName}">
 		{#if ingredient.kind === "exact"}
 			<InlineIngredientUnit quantity={ingredient.quantity} unit={ingredient.unit} />
 			of {ingredient.name}
@@ -55,7 +59,7 @@
 		{/if}
 
 		{#if ingredient.notes}
-			<div><em>{ingredient.notes}</em></div>
+			<div class="ml-2"><em>{ingredient.notes}</em></div>
 		{/if}
 	</label>
 </div>

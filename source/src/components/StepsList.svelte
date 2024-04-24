@@ -4,15 +4,15 @@
 	export let steps: RecipeStep[] = [];
 </script>
 
-<h3>Instructions</h3>
+<h3 class="text-2xl font-bold">Instructions</h3>
 
-<ol>
+<ol class="list-inside list-decimal">
 	{#each steps as step}
-		<li>
+		<li class="mb-2">
 			{step.description}
 
 			{#if step.notes}
-				<p class="notes"><em>{step.notes}</em></p>
+				<p class="ml-2"><em>{step.notes}</em></p>
 			{/if}
 		</li>
 	{/each}
