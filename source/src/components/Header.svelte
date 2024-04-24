@@ -14,9 +14,9 @@
 			JustGiveMeTheDamn<span class="text-red-500">.Recipes</span>
 		</a>
 		<div class="hidden md:flex">
-			<ul class="flex flex-col">
-				<li>
-					<a href="/recipes/slow-cooker" class="px-2 py-1 font-bold text-black hover:text-gray-500"
+			<ul class="flex flex-col py-1">
+				<li class="px-2">
+					<a href="/recipes/slow-cooker" class=" font-bold text-black hover:text-gray-500"
 						>Slow Cooker Recipes</a
 					>
 				</li>

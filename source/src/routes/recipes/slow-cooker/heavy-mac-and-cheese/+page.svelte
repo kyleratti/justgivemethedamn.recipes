@@ -67,14 +67,8 @@
 	<b>Note:</b> This is a very "heavy" meal and is very filling. I recommend serving this as a side dish.
 </p>
 
-<div class="mt-4">
-	<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
-</div>
+<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
 
-<div class="mt-4">
-	<IngredientsList ingredients={recipe.ingredients} />
-</div>
+<IngredientsList ingredients={recipe.ingredients} />
 
-<div class="mt-4 pb-8">
-	<StepsList steps={recipe.steps} />
-</div>
+<StepsList steps={recipe.steps} />
