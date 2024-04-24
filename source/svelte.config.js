@@ -20,6 +20,7 @@ const config = {
 		}),
 		alias: {
 			$components: "./src/components",
+			$img: "./src/img",
 		},
 		paths: {
 			relative: process.argv.includes("dev"),
