@@ -1,3 +1,28 @@
 {
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "workbench.editor.customLabels.patterns": {
+    // The main content for the whole website
+    "source/src/routes/+page.svelte": "Main Page", // The home route page skeleton
+    "source/src/routes/+page.[tj]s": "Main Page Script (c)", // The script for it
+    "source/src/routes/+page.server.[tj]s": "Main Page Script (s)", // The server script for it
+    "source/src/routes/+layout.svelte": "Root Layout", // The main (root) layout for the website
+    "source/src/routes/+layout.[tj]s": "Root Layout Script (c)", // The client script associated with the whole website
+    "source/src/routes/+layout.server.[tj]s": "Root Layout Script (s)", // The server script associated with the whole website
+    // Root error pages
+    "source/src/routes/+error.svelte": "Root (error)", // The root error-page skeleton for the whole website
+    "src/error.html": "Fallback (error)", // The fallback error-page skeleton for the whole website
+    // Nested pages content
+    "source/src/routes/?*/**/+page.svelte": "/${dirname}", // A nested page skeleton
+    "source/src/routes/?*/**/+page.[tj]s": "/${dirname} Script (c)", // A nested page script
+    "source/src/routes/?*/**/+page.server.[tj]s": "/${dirname} Script (s)", // A nested page script (only runs on server)
+    "source/src/routes/?*/**/+layout.svelte": "/${dirname} Layout", // A nested layout markup file
+    "source/src/routes/?*/**/+layout.server.[tj]s": "/${dirname} Layout Script (s)", // A nested layout script that only runs on the server
+    "source/src/routes/?*/**/+layout.[tj]s": "/${dirname} Layout Script (c)", // A nested layout script that runs on the server and the client
+    // Nested error pages
+    "source/src/routes/?*/**/+error.svelte": "/${dirname} (error)", // A nested error page
+    // Endpoint Scripts (APIs)
+    "source/src/routes/**/+server.[tj]s": "/${dirname} Endpoint", // An API endpoint script (server only)
+    // ANY Svelte component anywhere
+    "source/src/**/[!+]*.svelte": "${filename}" // A normal svelte component, in a route folder or a '/components' folder.
+  }
 }

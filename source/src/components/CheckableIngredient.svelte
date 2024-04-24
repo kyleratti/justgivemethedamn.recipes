@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Ingredient, IngredientUnit } from "$lib/types";
 	import InlineIngredientUnit from "$components/InlineIngredientUnit.svelte";
-	import { classes } from "$lib/classesUtil";
 
 	export let ingredient: Ingredient = {} as Ingredient;
 
@@ -44,7 +43,7 @@
 	const ingredientHtmlName = getHtmlNameFromIngredient(ingredient);
 </script>
 
-<div class="form-ext-control form-ext-checkbox my-1">
+<div class="my-2 md:my-4">
 	<input
 		id="ingredient-check--{ingredientHtmlName}"
 		class="peer has-[:checked]:line-through"
@@ -59,7 +58,7 @@
 		{/if}
 
 		{#if ingredient.notes}
-			<div class="ml-2"><em>{ingredient.notes}</em></div>
+			<div class="ml-4"><em>{ingredient.notes}</em></div>
 		{/if}
 	</label>
 </div>

@@ -73,6 +73,6 @@
 	<IngredientsList ingredients={recipe.ingredients} />
 </div>
 
-<div class="mt-4">
+<div class="mt-4 pb-8">
 	<StepsList steps={recipe.steps} />
 </div>
