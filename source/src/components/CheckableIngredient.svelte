@@ -53,7 +53,7 @@
 	<label class="peer-checked:line-through" for="ingredient-check--{ingredientHtmlName}">
 		{#if ingredient.kind === "exact"}
 			<InlineIngredientUnit quantity={ingredient.quantity} unit={ingredient.unit} />
-			of {ingredient.name}
+			{ingredient.name}
 		{:else if ingredient.kind === "approximate"}
 			{ingredient.description}
 		{/if}
