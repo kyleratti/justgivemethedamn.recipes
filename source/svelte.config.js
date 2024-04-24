@@ -21,6 +21,9 @@ const config = {
 		alias: {
 			$components: "./src/components",
 		},
+		paths: {
+			relative: process.argv.includes("dev"),
+		},
 	},
 };
 
