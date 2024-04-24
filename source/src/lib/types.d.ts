@@ -33,3 +33,5 @@ export type CookingRecipe = {
 	ingredients: Ingredient[];
 	steps: RecipeStep[];
 };
+
+export type Contributor = { kind: "person"; name: string } | { kind: "website"; url: string };

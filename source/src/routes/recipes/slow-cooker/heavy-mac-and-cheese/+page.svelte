@@ -1,9 +1,20 @@
 <script lang="ts">
-	import type { CookingRecipe } from "$lib/types";
+	import type { Contributor, CookingRecipe } from "$lib/types";
 	import IngredientsList from "$components/IngredientsList.svelte";
 	import RecipeTime from "$components/RecipeTime.svelte";
 	import StepsList from "$components/StepsList.svelte";
 	import { createTitle } from "$lib/titleUtil";
+
+	const contributors: Contributor[] = [
+		{
+			kind: "person",
+			name: "Kyle",
+		},
+		{
+			kind: "website",
+			url: "https://amandascookin.com/crockpot-macaroni-and-cheese/",
+		},
+	];
 
 	const recipe: CookingRecipe = {
 		prepTimeMinutes: 30,
