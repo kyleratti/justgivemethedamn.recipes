@@ -10,7 +10,7 @@ on:
 
 # Allow one run of this workflow per branch and cancel existing runs if triggered again
 concurrency:
-  group: JustGiveMeTheDamnRecipes-${{ github.ref }}
+  group: JustGiveMeTheDamnRecipes-deploy--production
   cancel-in-progress: true
 
 jobs:
@@ -30,3 +30,4 @@ jobs:
           ssh_deploy_user: ${{ secrets.SSH_DEPLOY_USER }}
           ssh_deploy_key: ${{ secrets.SSH_DEPLOY_KEY }}
           docker_compose_file: ${{ vars.DOCKER_COMPOSE_FILE }}
+          dockerfile_working_directory: ${{ vars.DOCKERFILE_WORKING_DIRECTORY }}

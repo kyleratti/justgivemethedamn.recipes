@@ -1,11 +1,8 @@
 FROM node:20-alpine AS build
 WORKDIR /app
-COPY package*.json ./
-RUN date
-RUN ls -al ./
+COPY . ./
 RUN npm install
 RUN npx update-browserslist-db@latest
-COPY . .
 RUN npm run build
 
 FROM --platform=$TARGETPLATFORM nginx:alpine AS host
