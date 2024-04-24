@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { classes } from "$lib/classesUtil";
-	import { onMount } from "svelte";
 
 	let isMenuOpen = false;
 

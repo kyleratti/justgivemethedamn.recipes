@@ -3,6 +3,7 @@
 	import IngredientsList from "$components/IngredientsList.svelte";
 	import RecipeTime from "$components/RecipeTime.svelte";
 	import StepsList from "$components/StepsList.svelte";
+	import { createTitle } from "$lib/titleUtil";
 
 	const recipe: CookingRecipe = {
 		prepTimeMinutes: 30,
@@ -53,6 +54,10 @@
 		],
 	};
 </script>
+
+<svelte:head>
+	<title>{createTitle("Heavy Mac and Cheese")}</title>
+</svelte:head>
 
 <h2 class="mb-2 text-2xl font-bold">Heavy Mac and Cheese</h2>
 

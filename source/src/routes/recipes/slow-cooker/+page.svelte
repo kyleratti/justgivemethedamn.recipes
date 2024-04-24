@@ -1,6 +1,12 @@
 <script lang="ts">
+	import { createTitle } from "$lib/titleUtil";
+
 	//
 </script>
+
+<svelte:head>
+	<title>{createTitle("Slow Cooker Recipes")}</title>
+</svelte:head>
 
 <h2 class="mb-2 text-4xl font-bold">Slow Cooker Recipes</h2>
 
