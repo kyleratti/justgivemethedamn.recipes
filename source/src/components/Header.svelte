@@ -8,7 +8,7 @@
 	};
 </script>
 
-<nav class="sticky top-0 z-50 bg-white p-2" id="top">
+<nav class="sticky top-0 z-50 border-b-2 border-red-500 bg-white p-2" id="top">
 	<div class="flex justify-between">
 		<a class="text-lg font-bold text-black hover:text-gray-500 md:text-2xl" href="/">
 			JustGiveMeTheDamn<span class="text-red-500">.Recipes</span>
@@ -35,10 +35,13 @@
 		</div>
 	</div>
 	<div
-		class={classes("slide-down relative block text-right md:hidden", {
-			["top-[0]"]: isMenuOpen,
-			["top-[-250px]"]: !isMenuOpen,
-		})}
+		class={classes(
+			"slide-down absolute right-0 block h-[4rem] border-b-2 border-l-2 border-red-500 bg-white text-right md:hidden",
+			{
+				["top-[3rem]"]: isMenuOpen,
+				["top-[-5rem]"]: !isMenuOpen,
+			},
+		)}
 	>
 		<ul class="mt-4 flex flex-col">
 			<li>
