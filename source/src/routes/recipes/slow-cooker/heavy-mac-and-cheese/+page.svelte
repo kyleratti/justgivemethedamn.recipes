@@ -67,7 +67,9 @@
 	<b>Note:</b> This is a very "heavy" meal and is very filling. I recommend serving this as a side dish.
 </p>
 
-<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
+<div class="mt-4">
+	<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
+</div>
 
 <div class="mt-4">
 	<IngredientsList ingredients={recipe.ingredients} />

@@ -16,4 +16,9 @@
 			>Heavy Mac and Cheese</a
 		>
 	</li>
+	<li>
+		<a href="/recipes/slow-cooker/tuscan-chicken" class="text-blue-500 hover:underline"
+			>Tuscan Chicken</a
+		>
+	</li>
 </ul>
