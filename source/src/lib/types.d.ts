@@ -1,3 +1,5 @@
+import Fraction from "fraction.js";
+
 type IngredientUnit =
 	| "pound"
 	| "ounce"
@@ -11,7 +13,7 @@ type IngredientUnit =
 	| "item";
 
 type ExactIngredient = {
-	quantity: number;
+	quantity: number | Fraction;
 	unit: IngredientUnit;
 	name: string;
 };

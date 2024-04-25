@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Ingredient, IngredientUnit } from "$lib/types";
+	import type { ExactIngredient, Ingredient, IngredientUnit } from "$lib/types";
 	import InlineIngredientUnit from "$components/InlineIngredientUnit.svelte";
 	import { exhaustiveCheck } from "$lib/patternMatch";
 
@@ -32,11 +32,19 @@
 		}
 	};
 
+	const getHtmlValueForIngredientQuantity = (quantity: ExactIngredient["quantity"]) => {
+		if (typeof quantity === "number") {
+			return quantity;
+		}
+
+		return quantity.valueOf().toString();
+	};
+
 	const getHtmlNameFromIngredient = (ingredient: Ingredient) => {
 		const text = (() => {
 			switch (ingredient.kind) {
 				case "exact":
-					return `${ingredient.quantity}-${getHtmlNameFromIngredientUnit(ingredient.unit)}-${ingredient.name}`;
+					return `${getHtmlValueForIngredientQuantity(ingredient.quantity)}-${getHtmlNameFromIngredientUnit(ingredient.unit)}-${ingredient.name}`;
 				case "approximate":
 					return ingredient.description;
 				default:

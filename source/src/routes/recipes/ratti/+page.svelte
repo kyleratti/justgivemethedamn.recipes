@@ -14,6 +14,11 @@
 
 <ul class="list-inside list-disc">
 	<li>
+		<a href="/recipes/ratti/chris-caramel-bars" class="text-blue-500 hover:underline"
+			>Chris' Caramel Bars</a
+		>
+	</li>
+	<li>
 		<a href="/recipes/ratti/grandma-wests-baked-beans" class="text-blue-500 hover:underline"
 			>Grandma West's Baked Beans</a
 		>

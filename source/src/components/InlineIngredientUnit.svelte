@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { IngredientUnit } from "$lib/types";
+	import type { ExactIngredient, IngredientUnit } from "$lib/types";
 	import Fraction from "fraction.js";
 
 	export let unit: IngredientUnit;
-	export let quantity: number;
+	export let quantity: ExactIngredient["quantity"];
 
 	const quantityAsFraction = new Fraction(quantity).toFraction(true);
 </script>
