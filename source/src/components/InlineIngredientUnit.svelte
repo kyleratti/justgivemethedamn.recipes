@@ -20,6 +20,8 @@
 	{quantityAsFraction} <abbr title="teaspoon">tsp</abbr>
 {:else if unit === "tablespoon"}
 	{quantityAsFraction} <abbr title="tablespoon">tbsp</abbr>
+{:else if unit === "can"}
+	{quantityAsFraction} {quantity === 1 ? "can" : "cans"}
 {:else}
 	{quantityAsFraction} {unit}
 {/if}

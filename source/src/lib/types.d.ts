@@ -6,7 +6,9 @@ type IngredientUnit =
 	| "milliliter"
 	| "teaspoon"
 	| "tablespoon"
-	| "cup";
+	| "cup"
+	| "can"
+	| "item";
 
 type ExactIngredient = {
 	quantity: number;

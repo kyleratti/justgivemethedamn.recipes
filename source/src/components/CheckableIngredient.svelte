@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Ingredient, IngredientUnit } from "$lib/types";
 	import InlineIngredientUnit from "$components/InlineIngredientUnit.svelte";
+	import { exhaustiveCheck } from "$lib/patternMatch";
 
 	export let ingredient: Ingredient = {} as Ingredient;
 
@@ -22,8 +23,12 @@
 				return "mL";
 			case "liter":
 				return "L";
+			case "can":
+				return "can";
+			case "item":
+				return "";
 			default:
-				throw new Error(`Unknown unit: ${unit}`);
+				return exhaustiveCheck(unit);
 		}
 	};
 
@@ -34,6 +39,8 @@
 					return `${ingredient.quantity}-${getHtmlNameFromIngredientUnit(ingredient.unit)}-${ingredient.name}`;
 				case "approximate":
 					return ingredient.description;
+				default:
+					return exhaustiveCheck(ingredient);
 			}
 		})();
 
