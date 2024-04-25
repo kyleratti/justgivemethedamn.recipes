@@ -10,7 +10,8 @@ type IngredientUnit =
 	| "tablespoon"
 	| "cup"
 	| "can"
-	| "item";
+	| "item"
+	| "bunch";
 
 type ExactIngredient = {
 	quantity: number | Fraction;

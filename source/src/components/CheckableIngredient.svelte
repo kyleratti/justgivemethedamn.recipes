@@ -27,6 +27,8 @@
 				return "can";
 			case "item":
 				return "";
+			case "bunch":
+				return "bunch";
 			default:
 				return exhaustiveCheck(unit);
 		}

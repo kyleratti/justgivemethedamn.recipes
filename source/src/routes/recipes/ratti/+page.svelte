@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { createTitle } from "$lib/titleUtil";
-
-	//
 </script>
 
 <svelte:head>
@@ -22,5 +20,8 @@
 		<a href="/recipes/ratti/grandma-wests-baked-beans" class="text-blue-500 hover:underline"
 			>Grandma West's Baked Beans</a
 		>
+	</li>
+	<li>
+		<a href="/recipes/ratti/laurens-salsa" class="text-blue-500 hover:underline">Lauren's Salsa</a>
 	</li>
 </ul>
