@@ -5,7 +5,10 @@
 </script>
 
 <div class="mt-4 pb-8">
-	<h3 class="mb-2 text-2xl font-bold">Instructions</h3>
+	<slot name="title" />
+	{#if !$$slots.title}
+		<h3 class="mb-2 text-2xl font-bold">Instructions</h3>
+	{/if}
 
 	<ol class="list-inside list-decimal">
 		{#each steps as step}

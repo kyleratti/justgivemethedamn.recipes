@@ -22,6 +22,11 @@
 		>
 	</li>
 	<li>
+		<a href="/recipes/ratti/laurens-chicken-pot-pie" class="text-blue-500 hover:underline"
+			>Lauren's Chicken Pot Pie</a
+		>
+	</li>
+	<li>
 		<a href="/recipes/ratti/laurens-salsa" class="text-blue-500 hover:underline">Lauren's Salsa</a>
 	</li>
 </ul>
