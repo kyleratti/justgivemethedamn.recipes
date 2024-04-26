@@ -41,10 +41,10 @@
 </script>
 
 <svelte:head>
-	<title>{createTitle("Lauren's Salsa")}</title>
+	<title>{createTitle("Chris' Salsa")}</title>
 </svelte:head>
 
-<h2 class="mb-2 text-2xl font-bold">Lauren's Salsa</h2>
+<h2 class="mb-2 text-2xl font-bold">Chris' Salsa</h2>
 
 <p>Can be made 1 day in advance and refrigerated.</p>
 
