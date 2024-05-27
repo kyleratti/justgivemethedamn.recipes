@@ -4,12 +4,14 @@
 	import "../app.css";
 </script>
 
-<Header />
+<div class="max-w-5xl mx-auto">
+	<Header />
 
-<section class="p-2 md:p-4">
-	<div class="mx-auto w-full lg:max-w-screen-md">
-		<slot />
-	</div>
-</section>
+	<section class="p-2 md:p-4">
+		<div class="mx-auto w-full lg:max-w-screen-md">
+			<slot />
+		</div>
+	</section>
 
-<Footer />
+	<Footer />
+</div>
