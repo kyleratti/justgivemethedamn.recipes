@@ -24,7 +24,36 @@
 	}
 </script>
 
-<div class="flex flex-row justify-center align-baseline">
+<div class="grid grid-cols-[max-content_max-content] gap-1 py-4 lg:hidden">
+	<div class="font-bold text-right">
+		Prep Time
+	</div>
+	<div class="ml-2">
+		{#each generateHumanReadableTimeFromMinutes(prepTimeMinutes) as time}
+			<span>{time}</span>
+		{/each}
+	</div>
+
+	<div class="font-bold text-right">
+		Cook Time
+	</div>
+	<div class="ml-2">
+		{#each generateHumanReadableTimeFromMinutes(cookTimeMinutes) as time}
+			<span>{time}</span>
+		{/each}
+	</div>
+
+	<div class="font-bold text-right">
+		Total Time
+	</div>
+	<div class="ml-2">
+		{#each generateHumanReadableTimeFromMinutes(prepTimeMinutes + cookTimeMinutes) as time}
+			<span>{time}</span>
+		{/each}
+	</div>
+</div>
+
+<div class="hidden lg:block flex flex-row justify-start align-baseline">
 	<div class="m-1 inline-block md:m-8" style="min-width: 50px; max-width: 250px;">
 		<div class="mx-2 pt-1">
 			<div class="mb-2">
