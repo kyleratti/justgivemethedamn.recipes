@@ -2,6 +2,7 @@
 	import type { ExactIngredient, Ingredient, IngredientUnit } from "$lib/types";
 	import InlineIngredientUnit from "$components/InlineIngredientUnit.svelte";
 	import { exhaustiveCheck } from "$lib/patternMatch";
+  import CheckableInlineItem from "$components/CheckableInlineItem.svelte";
 
 	export let ingredient: Ingredient = {} as Ingredient;
 
@@ -60,22 +61,15 @@
 	const ingredientHtmlName = getHtmlNameFromIngredient(ingredient);
 </script>
 
-<div class="my-2 md:my-4">
-	<input
-		id="ingredient-check--{ingredientHtmlName}"
-		class="peer has-[:checked]:line-through"
-		type="checkbox"
-	/>
-	<label class="peer-checked:line-through" for="ingredient-check--{ingredientHtmlName}">
-		{#if ingredient.kind === "exact"}
-			<InlineIngredientUnit quantity={ingredient.quantity} unit={ingredient.unit} />
-			{ingredient.name}
-		{:else if ingredient.kind === "approximate"}
-			{ingredient.description}
-		{/if}
+<CheckableInlineItem name={ingredientHtmlName}>
+	{#if ingredient.kind === "exact"}
+		<InlineIngredientUnit quantity={ingredient.quantity} unit={ingredient.unit} />
+		{ingredient.name}
+	{:else if ingredient.kind === "approximate"}
+		{ingredient.description}
+	{/if}
 
-		{#if ingredient.notes}
-			<div class="ml-4"><em>{ingredient.notes}</em></div>
-		{/if}
-	</label>
-</div>
+	{#if ingredient.notes}
+		<div class="ml-4"><em>{ingredient.notes}</em></div>
+	{/if}
+</CheckableInlineItem>

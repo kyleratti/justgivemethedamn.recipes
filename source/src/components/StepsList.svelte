@@ -12,7 +12,7 @@
 
 	<ol class="list-inside list-decimal">
 		{#each steps as step}
-			<li class="mb-2">
+			<li class="mb-2 text-lg">
 				{step.description}
 
 				{#if step.notes}
