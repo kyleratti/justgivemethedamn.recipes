@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { RecipeStep } from "$lib/types";
+	import CheckableInlineItem from "$components/CheckableInlineItem.svelte";
 
 	export let steps: RecipeStep[] = [];
 </script>
@@ -11,14 +12,16 @@
 	{/if}
 
 	<ol class="list-inside list-decimal">
-		{#each steps as step}
-			<li class="mb-2 text-lg">
-				{step.description}
+		{#each steps as step, i}
+			<ol class="my-4 text-lg">
+				<CheckableInlineItem name={"steps-list--" + i} hideCheckbox>
+					{i+1}. {step.description}
 
-				{#if step.notes}
-					<p class="ml-4"><em>{step.notes}</em></p>
-				{/if}
-			</li>
+					{#if step.notes}
+						<p class="ml-4"><em>{step.notes}</em></p>
+					{/if}
+				</CheckableInlineItem>
+			</ol>
 		{/each}
 	</ol>
 </div>

@@ -9,6 +9,8 @@
 	<h3 class="mb-2 text-2xl font-bold">Ingredients</h3>
 
 	{#each ingredients as ingredient}
-		<CheckableIngredient {ingredient} />
+		<div class="my-4">
+			<CheckableIngredient {ingredient} />
+		</div>
 	{/each}
 </div>
