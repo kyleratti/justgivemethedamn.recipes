@@ -16,6 +16,11 @@
 		<div class="hidden md:flex">
 			<ul class="flex flex-row py-1">
 				<li class="px-2">
+					<a href="/recipes/healthy" class=" font-bold text-black hover:text-gray-500"
+						>Healthy Recipes</a
+					>
+				</li>
+				<li class="px-2">
 					<a href="/recipes/ratti" class="font-bold text-black hover:text-gray-500">
 						Ratti Recipes</a
 					>
@@ -41,14 +46,19 @@
 	</div>
 	<div
 		class={classes(
-			"slide-down absolute right-0 block h-[4rem] border-b-2 border-l-2 border-red-500 bg-white text-right md:hidden",
+			"slide-down absolute right-0 block h-[7rem] border-b-2 border-l-2 border-red-500 bg-white text-right md:hidden",
 			{
 				["top-[3rem]"]: isMenuOpen,
-				["top-[-5rem]"]: !isMenuOpen,
+				["top-[-8rem]"]: !isMenuOpen,
 			},
 		)}
 	>
 		<ul class="mt-4 flex flex-col">
+			<li>
+				<a href="recipes/healthy"
+				on:click={toggleMenu}
+				class="px-2 py-1 font-bold text-black hover:text-gray-500">Healthy Recipes</a>
+			</li>
 			<li>
 				<a
 					href="/recipes/ratti"
