@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/kyleratti/justgivemethedamn.recipes/compare/v1.0.0...v1.1.0) (2024-07-03)
+
+
+### Bug Fixes
+
+* use absolute path ([b1be4d2](https://github.com/kyleratti/justgivemethedamn.recipes/commit/b1be4d21b21a8808fbec91af37237c7c78aad27c))
+
+
+### Features
+
+* add Creamy Avocado Pasta recipe ([1b34400](https://github.com/kyleratti/justgivemethedamn.recipes/commit/1b34400576496fa787d7ed86ac18dde1eebaa957))
+
 # 1.0.0 (2024-05-27)
 
 
