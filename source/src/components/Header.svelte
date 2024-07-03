@@ -55,7 +55,7 @@
 	>
 		<ul class="mt-4 flex flex-col">
 			<li>
-				<a href="recipes/healthy"
+				<a href="/recipes/healthy"
 				on:click={toggleMenu}
 				class="px-2 py-1 font-bold text-black hover:text-gray-500">Healthy Recipes</a>
 			</li>
