@@ -29,4 +29,9 @@
 			>Lauren's Chicken Pot Pie</a
 		>
 	</li>
+	<li>
+		<a href="/recipes/ratti/kyles-ginger-snaps" class="text-blue-500 hover:underline">
+			Kyle's Ginger Snaps
+		</a>
+	</li>
 </ul>
