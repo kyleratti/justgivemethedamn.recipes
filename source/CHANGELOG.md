@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/kyleratti/justgivemethedamn.recipes/compare/v1.1.0...v1.2.0) (2024-12-31)
+
+
+### Features
+
+* add Kyle's Ginger Snaps ([25cd3ad](https://github.com/kyleratti/justgivemethedamn.recipes/commit/25cd3ad8f298241a5f3494961bf5245dca86459a))
+
 # [1.1.0](https://github.com/kyleratti/justgivemethedamn.recipes/compare/v1.0.0...v1.1.0) (2024-07-03)
 
 
