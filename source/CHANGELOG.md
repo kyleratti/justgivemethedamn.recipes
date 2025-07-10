@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/kyleratti/justgivemethedamn.recipes/compare/v1.2.0...v1.3.0) (2025-07-10)
+
+
+### Features
+
+* add Kyle's chicken brine ([8acb1d5](https://github.com/kyleratti/justgivemethedamn.recipes/commit/8acb1d5dfce9f59eaebbdef59c86809aa026fed1))
+
 # [1.2.0](https://github.com/kyleratti/justgivemethedamn.recipes/compare/v1.1.0...v1.2.0) (2024-12-31)
 
 
