@@ -30,6 +30,11 @@
 		>
 	</li>
 	<li>
+		<a href="/recipes/ratti/kyles-chicken-brine" class="text-blue-500 hover:underline">
+			Kyle's Chicken Brine
+		</a>
+	</li>
+	<li>
 		<a href="/recipes/ratti/kyles-ginger-snaps" class="text-blue-500 hover:underline">
 			Kyle's Ginger Snaps
 		</a>
