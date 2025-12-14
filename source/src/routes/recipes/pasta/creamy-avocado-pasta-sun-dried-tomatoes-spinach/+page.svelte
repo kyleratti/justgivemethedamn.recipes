@@ -5,6 +5,7 @@
 	import StepsList from "$components/StepsList.svelte";
 	import { createTitle } from "$lib/titleUtil";
 	import Fraction from "fraction.js";
+	import RecipeNote from "$components/RecipeNote.svelte";
 
 	const recipe: CookingRecipe = {
 		prepTimeMinutes: 15,
@@ -40,10 +41,18 @@
 
 <h2 class="mb-2 text-2xl font-bold">Creamy Avocado Pasta with Sun-Dried Tomatoes and Spinach</h2>
 
-<p>Feel free to add other vegetables to this recipe, such as chopped broccoli florets or sliced mushrooms.</p>
+<RecipeNote>
+	Feel free to add other vegetables to this recipe, such as chopped broccoli florets or sliced mushrooms.
+</RecipeNote>
 
-<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
+<div class="bg-slate-50 border border-slate-200 rounded-md mb-4">
+	<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
+</div>
 
-<IngredientsList ingredients={recipe.ingredients} />
+<div class="bg-slate-50 border border-slate-200 rounded-md md:p-8 p-4 mb-4">
+	<IngredientsList ingredients={recipe.ingredients} />
+</div>
 
-<StepsList steps={recipe.steps} />
+<div class="bg-slate-50 border border-slate-200 rounded-md md:p-8 p-4 mb-4">
+	<StepsList steps={recipe.steps} />
+</div>

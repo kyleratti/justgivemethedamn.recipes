@@ -104,12 +104,20 @@
 
 <p>This pot pie can be frozen for up to 1 month.</p>
 
-<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
+<div class="bg-slate-50 border border-slate-200 rounded-md mb-4">
+	<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
+</div>
 
-<IngredientsList ingredients={recipe.ingredients} />
+<div class="bg-slate-50 border border-slate-200 rounded-md md:p-8 p-4 mb-4">
+	<IngredientsList ingredients={recipe.ingredients} />
+</div>
 
-<StepsList steps={recipe.steps} />
+<div class="bg-slate-50 border border-slate-200 rounded-md md:p-8 p-4 mb-4">
+	<StepsList steps={recipe.steps} />
+</div>
 
-<StepsList steps={fillingSteps}>
-	<h3 slot="title" class="mb-2 text-xl font-bold">Filling Instructions</h3>
-</StepsList>
+<div class="bg-slate-50 border border-slate-200 rounded-md md:p-8 p-4 mb-4">
+	<StepsList steps={fillingSteps}>
+		<h3 slot="title" class="mb-4 text-3xl font-bold">Filling Instructions</h3>
+	</StepsList>
+</div>

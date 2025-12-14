@@ -47,8 +47,14 @@
 
 <h2 class="mb-2 text-2xl font-bold">Kyle's Ginger Snaps</h2>
 
-<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
+<div class="bg-slate-50 border border-slate-200 rounded-md mb-4">
+	<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
+</div>
 
-<IngredientsList ingredients={recipe.ingredients} />
+<div class="bg-slate-50 border border-slate-200 rounded-md md:p-8 p-4 mb-4">
+	<IngredientsList ingredients={recipe.ingredients} />
+</div>
 
-<StepsList steps={recipe.steps} />
+<div class="bg-slate-50 border border-slate-200 rounded-md md:p-8 p-4 mb-4">
+	<StepsList steps={recipe.steps} />
+</div>

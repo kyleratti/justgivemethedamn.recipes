@@ -5,11 +5,11 @@
 	export let ingredients: Ingredient[] = [];
 </script>
 
-<div class="mt-4">
-	<h3 class="mb-2 text-2xl font-bold">Ingredients</h3>
+<div>
+	<h3 class="mb-4 text-3xl font-bold">Ingredients</h3>
 
 	{#each ingredients as ingredient}
-		<div class="my-4">
+		<div class="not-first-of-type:my-4">
 			<CheckableIngredient {ingredient} />
 		</div>
 	{/each}

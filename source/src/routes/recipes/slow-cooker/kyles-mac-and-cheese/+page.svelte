@@ -4,6 +4,7 @@
 	import RecipeTime from "$components/RecipeTime.svelte";
 	import StepsList from "$components/StepsList.svelte";
 	import { createTitle } from "$lib/titleUtil";
+	import RecipeNote from "$components/RecipeNote.svelte";
 
 	const contributors: Contributor[] = [
 		{
@@ -67,19 +68,23 @@
 </script>
 
 <svelte:head>
-	<title>{createTitle("Heavy Mac and Cheese")}</title>
+	<title>{createTitle("Kyle's Mac and Cheese")}</title>
 </svelte:head>
 
-<h2 class="mb-2 text-2xl font-bold">Heavy Mac and Cheese</h2>
+<h2 class="mb-2 text-2xl font-bold">Kyle's Mac and Cheese</h2>
 
-<p>This is a delicious Mac and Cheese made in a slow cooker.</p>
+<RecipeNote>
+	This is a very "heavy" meal and is very filling. I recommend serving this as a side dish.
+</RecipeNote>
 
-<p>
-	<b>Note:</b> This is a very "heavy" meal and is very filling. I recommend serving this as a side dish.
-</p>
+<div class="bg-slate-50 border border-slate-200 rounded-md mb-4">
+	<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
+</div>
 
-<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
+<div class="bg-slate-50 border border-slate-200 rounded-md md:p-8 p-4 mb-4">
+	<IngredientsList ingredients={recipe.ingredients} />
+</div>
 
-<IngredientsList ingredients={recipe.ingredients} />
-
-<StepsList steps={recipe.steps} />
+<div class="bg-slate-50 border border-slate-200 rounded-md md:p-8 p-4 mb-4">
+	<StepsList steps={recipe.steps} />
+</div>

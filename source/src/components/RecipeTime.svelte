@@ -16,21 +16,21 @@
 
 		if (remainingMinutes > 0) {
 			if (remainingMinutes === 1) {
-				yield "1 minute";
+				yield " 1 minute";
 			} else {
-				yield `${remainingMinutes} minutes`;
+				yield ` ${remainingMinutes} minutes`;
 			}
 		}
 	}
 </script>
 
-<div class="grid grid-cols-[max-content_max-content] gap-1 py-4 lg:hidden">
+<div class="grid grid-cols-[max-content_max-content] gap-1 pb-4 lg:hidden p-2">
 	<div class="font-bold text-right">
 		Prep Time
 	</div>
 	<div class="ml-2">
 		{#each generateHumanReadableTimeFromMinutes(prepTimeMinutes) as time}
-			<span>{time}</span>
+			<span> {time}</span>
 		{/each}
 	</div>
 

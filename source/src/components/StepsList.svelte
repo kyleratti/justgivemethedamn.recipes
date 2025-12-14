@@ -5,15 +5,15 @@
 	export let steps: RecipeStep[] = [];
 </script>
 
-<div class="mt-4 pb-8">
+<div class="mb-8">
 	<slot name="title" />
 	{#if !$$slots.title}
-		<h3 class="mb-2 text-2xl font-bold">Instructions</h3>
+		<h3 class="mb-4 text-3xl font-bold">Instructions</h3>
 	{/if}
 
 	<ol class="list-inside list-decimal">
 		{#each steps as step, i}
-			<ol class="my-4 text-lg">
+			<ol class="not-last:my-4 text-lg">
 				<CheckableInlineItem name={"steps-list--" + i} hideCheckbox>
 					{i+1}. {step.description}
 

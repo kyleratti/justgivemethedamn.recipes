@@ -5,6 +5,7 @@
 	import { createTitle } from "$lib/titleUtil";
 	import type { Contributor, CookingRecipe } from "$lib/types";
 	import Fraction from "fraction.js";
+	import RecipeNote from "$components/RecipeNote.svelte";
 
 	const contributors: Contributor[] = [{ kind: "person", name: "Kyle" }];
 
@@ -39,14 +40,19 @@
 
 <h2 class="mb-2 text-2xl font-bold">Kyle's Chicken Brine</h2>
 
-<p>
-	Brining chicken will help add flavor to chicken that otherwise tastes bland on the inside.
+<RecipeNote>
+	Brining chicken will help add flavor to chicken.
 	I do this first and then spend the 30 minutes prepping the rest of the meal.
-	I've also started doing this before cooking chicken in a slow cooker. Game changer.
-</p>
+</RecipeNote>
 
-<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
+<div class="bg-slate-50 border border-slate-200 rounded-md mb-4">
+	<RecipeTime prepTimeMinutes={recipe.prepTimeMinutes} cookTimeMinutes={recipe.cookTimeMinutes} />
+</div>
 
-<IngredientsList ingredients={recipe.ingredients} />
+<div class="bg-slate-50 border border-slate-200 rounded-md md:p-8 p-4 mb-4">
+	<IngredientsList ingredients={recipe.ingredients} />
+</div>
 
-<StepsList steps={recipe.steps} />
+<div class="bg-slate-50 border border-slate-200 rounded-md md:p-8 p-4 mb-4">
+	<StepsList steps={recipe.steps} />
+</div>
