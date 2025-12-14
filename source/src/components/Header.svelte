@@ -34,7 +34,7 @@
 		</div>
 		<div class="inline-block md:hidden">
 			<button
-				class="flex items-center rounded border border-black px-3 py-2 text-black hover:border-gray-500 hover:text-gray-500"
+				class="flex items-center rounded-sm border border-black px-3 py-2 text-black hover:border-gray-500 hover:text-gray-500"
 				on:click={toggleMenu}
 			>
 				<svg class="h-3 w-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -46,10 +46,10 @@
 	</div>
 	<div
 		class={classes(
-			"slide-down absolute right-0 block h-[7rem] border-b-2 border-l-2 border-red-500 bg-white text-right md:hidden",
+			"slide-down absolute right-0 block h-28 border-b-2 border-l-2 border-red-500 bg-white text-right md:hidden",
 			{
-				["top-[3rem]"]: isMenuOpen,
-				["top-[-8rem]"]: !isMenuOpen,
+				["top-12"]: isMenuOpen,
+				["-top-32"]: !isMenuOpen,
 			},
 		)}
 	>

@@ -22,6 +22,6 @@
 
 <p class="my-2 text-sm italic">
 	This is an open source code project. You can contribute on <a class="whitespace-nowrap inline-flex align-middle items-center" href="https://github.com/kyleratti/justgivemethedamn.recipes" target="_blank">
-			<img src={githubLogo} alt="GitHub logo" class="inline h-[1rem] w-[1rem] mr-1" /> GitHub.
+			<img src={githubLogo} alt="GitHub logo" class="inline h-4 w-4 mr-1" /> GitHub.
 		</a>
 </p>
