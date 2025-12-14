@@ -19,7 +19,7 @@
 		"@semantic-release/github": "^12.0.2",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.49.2",
-		"@sveltejs/vite-plugin-svelte": "^3.1.2",
+		"@sveltejs/vite-plugin-svelte": "^6.2.1",
 		"@tailwindcss/postcss": "^4.1.18",
 		"@types/eslint": "^8.56.12",
 		"@typescript-eslint/eslint-plugin": "^7.18.0",
@@ -32,13 +32,13 @@
 		"prettier": "^3.7.4",
 		"prettier-plugin-svelte": "^3.4.0",
 		"prettier-plugin-tailwindcss": "^0.7.2",
-		"semantic-release": "^24.2.9",
-		"svelte": "^4.2.20",
+		"semantic-release": "^25.0.2",
+		"svelte": "^5.46.0",
 		"svelte-check": "^4.3.4",
 		"tailwindcss": "^4.1.18",
 		"tslib": "^2.8.1",
 		"typescript": "^5.9.3",
-		"vite": "^5.4.21"
+		"vite": "^7.2.7"
 	},
 	"type": "module"
 }
