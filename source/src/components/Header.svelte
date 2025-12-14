@@ -15,17 +15,17 @@
 		</a>
 		<div class="hidden md:flex">
 			<ul class="flex flex-row py-1">
-				<li class="px-2 bg-gray-50 border-1 border-gray-500 rounded-xs mx-2">
+				<li class="px-2 bg-gray-50 border border-gray-500 rounded-xs mx-2">
 					<a href="/recipes/pasta" class=" font-bold text-slate-800 hover:text-slate-600"
 						>Pasta Recipes</a
 					>
 				</li>
-				<li class="px-2 bg-gray-50 border-1 border-gray-500 rounded-xs mx-2">
+				<li class="px-2 bg-gray-50 border border-gray-500 rounded-xs mx-2">
 					<a href="/recipes/ratti" class="font-bold text-slate-800 hover:text-slate-600">
 						Ratti Recipes</a
 					>
 				</li>
-				<li class="px-2 bg-gray-50 border-1 border-gray-500 rounded-xs mx-2">
+				<li class="px-2 bg-gray-50 border border-gray-500 rounded-xs mx-2">
 					<a href="/recipes/slow-cooker" class=" font-bold text-slate-800 hover:text-slate-600"
 						>Slow Cooker Recipes</a
 					>
