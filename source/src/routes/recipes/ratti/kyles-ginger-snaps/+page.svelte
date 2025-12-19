@@ -49,7 +49,7 @@
 <h2 class="mb-2 text-2xl font-bold">Kyle's Ginger Snaps</h2>
 
 <div class="bg-slate-50 border border-slate-200 rounded-md md:p-8 p-4 mb-4">
-	<h3 class="mb-4 text-3xl font-bold" id="reheating">Jump To</h3>
+	<h3 class="mb-4 text-3xl font-bold">Jump To</h3>
 
 	<div>
 		<ol class="list-disc pl-6">
