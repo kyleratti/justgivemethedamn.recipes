@@ -3,7 +3,7 @@
 	import RecipeTime from "$components/RecipeTime.svelte";
 	import StepsList from "$components/StepsList.svelte";
 	import { createTitle } from "$lib/titleUtil";
-	import type { Contributor, CookingRecipe, RecipeStep } from "$lib/types";
+	import type { Contributor, CookingRecipe } from "$lib/types";
 	import Fraction from "fraction.js";
 	import RecipeNote from "$components/RecipeNote.svelte";
 
@@ -24,7 +24,7 @@
 			{ kind: "exact", quantity: new Fraction(1, 2), unit: "teaspoon", name: "ground cloves" },
 			{ kind: "exact", quantity: new Fraction(1, 4), unit: "teaspoon", name: "ground nutmeg" },
 			{ kind: "exact", quantity: new Fraction(1, 2), unit: "teaspoon", name: "salt" },
-			{ kind: "approximate", description: "Sugar for rolling (recommended chunky cane sugar)" },
+			{ kind: "approximate", description: "Sugar for rolling (recommended cane sugar for texture)" },
 		],
 		steps: [
 			{ description: "In a large bowl, add the sugar, butter, molasses, and egg." },
@@ -36,7 +36,7 @@
 			{ description: "Line baking sheets with parchment paper or silicone baking mats." },
 			{ description: "Pour some cane sugar into a small bowl for rolling." },
 			{ description: "Use a spoon or medium cookie scoop to shape the dough into approximately 1\" balls. Roll in sugar and place onto baking sheet." },
-			{ description: "Bake for 9-10 minutes or until just set. They will puff up then flatten while baking." },
+			{ description: "Bake for 9-10 minutes or until just set." },
 			{ description: "Remove from oven and let stand on cookie sheet for 1 minute before transferring to a cooling rack." },
 		],
 	};
