@@ -11,7 +11,7 @@
 
 	const recipe: CookingRecipe = {
 		prepTimeMinutes: 10,
-		cookTimeMinutes: 10,
+		cookTimeMinutes: 20,
 		ingredients: [
 			{ kind: "approximate", description: "Salmon filets" },
 			{ kind: "approximate", description: "Magic season blend (seafood magic) and salt" },
