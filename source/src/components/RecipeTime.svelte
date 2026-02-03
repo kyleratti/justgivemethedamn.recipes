@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let prepTimeMinutes: number;
 	export let cookTimeMinutes: number;
+	export let inline: boolean = false;
 
 	function* generateHumanReadableTimeFromMinutes(minutes: number) {
 		const hours = Math.floor(minutes / 60);
@@ -24,7 +25,7 @@
 	}
 </script>
 
-<div class="grid grid-cols-[max-content_max-content] gap-1 pb-4 lg:hidden p-2">
+<div class={`grid grid-cols-[max-content_max-content] gap-1 pb-4 md:hidden p-2 ${inline ? "inline-block" : "block"}`}>
 	<div class="font-bold text-right">
 		Prep Time
 	</div>
@@ -53,7 +54,7 @@
 	</div>
 </div>
 
-<div class="hidden lg:block flex flex-row justify-start align-baseline">
+<div class={`hidden flex-row justify-center w-full align-baseline ${inline ? "md:inline-flex" : "md:flex"}`}>
 	<div class="m-1 inline-block md:m-8" style="min-width: 50px; max-width: 250px;">
 		<div class="mx-2 pt-1">
 			<div class="mb-2">

@@ -26,6 +26,11 @@
 					>
 				</li>
 				<li class="px-2 bg-gray-50 border border-gray-500 rounded-xs mx-2">
+					<a href="/recipes/seafood" class="font-bold text-slate-800 hover:text-slate-600">
+						Seafood Recipes</a
+					>
+				</li>
+				<li class="px-2 bg-gray-50 border border-gray-500 rounded-xs mx-2">
 					<a href="/recipes/slow-cooker" class=" font-bold text-slate-800 hover:text-slate-600"
 						>Slow Cooker Recipes</a
 					>
@@ -46,10 +51,10 @@
 	</div>
 	<div
 		class={classes(
-			"slide-down absolute right-0 block h-38 border-b-2 border-l-2 border-red-500 bg-gray-100 text-right ps-4 md:hidden",
+			"slide-down absolute right-0 block h-48 border-b-2 border-l-2 border-red-500 bg-gray-100 text-right ps-4 md:hidden",
 			{
 				["top-12"]: isMenuOpen,
-				["-top-40"]: !isMenuOpen,
+				["-top-60"]: !isMenuOpen,
 			},
 		)}
 	>
@@ -64,6 +69,13 @@
 					href="/recipes/ratti"
 					on:click={toggleMenu}
 					class="px-2 py-1 font-bold text-slate-800 hover:text-gray-500">Ratti Recipes</a
+				>
+			</li>
+			<li class="my-2">
+				<a
+					href="/recipes/seafood"
+					on:click={toggleMenu}
+					class="px-2 py-1 font-bold text-slate-800 hover:text-gray-500">Seafood Recipes</a
 				>
 			</li>
 			<li class="my-2">
