@@ -43,7 +43,7 @@
 					"Once your mixture has thickened, remove from heat and slowly add cheese while stirring.",
 			},
 			{ description: "Drain pasta and return to pan." },
-			{ description: "Pour cheese mixture over to, stir, and serve." },
+			{ description: "Pour cheese mixture over top, stir, and serve." },
 		],
 	};
 </script>
