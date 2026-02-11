@@ -25,28 +25,24 @@
 	}
 </script>
 
-<div class={`grid grid-cols-[max-content_max-content] gap-1 pb-4 md:hidden p-2 ${inline ? "inline-block" : "block"}`}>
-	<div class="font-bold text-right">
-		Prep Time
-	</div>
+<div
+	class={`grid grid-cols-[max-content_max-content] gap-1 p-2 pb-4 md:hidden ${inline ? "inline-block" : "block"}`}
+>
+	<div class="text-right font-bold">Prep Time</div>
 	<div class="ml-2">
 		{#each generateHumanReadableTimeFromMinutes(prepTimeMinutes) as time}
 			<span> {time}</span>
 		{/each}
 	</div>
 
-	<div class="font-bold text-right">
-		Cook Time
-	</div>
+	<div class="text-right font-bold">Cook Time</div>
 	<div class="ml-2">
 		{#each generateHumanReadableTimeFromMinutes(cookTimeMinutes) as time}
 			<span>{time}</span>
 		{/each}
 	</div>
 
-	<div class="font-bold text-right">
-		Total Time
-	</div>
+	<div class="text-right font-bold">Total Time</div>
 	<div class="ml-2">
 		{#each generateHumanReadableTimeFromMinutes(prepTimeMinutes + cookTimeMinutes) as time}
 			<span>{time}</span>
@@ -54,16 +50,18 @@
 	</div>
 </div>
 
-<div class={`hidden flex-row justify-center w-full align-baseline ${inline ? "md:inline-flex" : "md:flex"}`}>
+<div
+	class={`hidden w-full flex-row justify-center align-baseline ${inline ? "md:inline-flex" : "md:flex"}`}
+>
 	<div class="m-1 inline-block md:m-8" style="min-width: 50px; max-width: 250px;">
-		<div class="mx-2 pt-1">
+		<div class="mx-2 pt-1 text-center">
 			<div class="mb-2">
 				<svg
 					aria-hidden="true"
 					focusable="false"
 					data-prefix="fas"
 					data-icon="bolt"
-					class="u-inline-block fa-utensils fa-w-10 fa-wrapper bg-blue-100 p-3 text-blue-600"
+					class="u-inline-block fa-utensils fa-w-10 fa-wrapper mx-auto bg-blue-100 p-3 text-blue-600"
 					role="img"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 320 512"
@@ -76,7 +74,7 @@
 				</svg>
 			</div>
 
-			<p class="mb-0 mt-2 font-bold">Prep Time</p>
+			<p class="mt-2 mb-0 font-bold">Prep Time</p>
 
 			{#each generateHumanReadableTimeFromMinutes(prepTimeMinutes) as time}
 				<span>{time}</span>
@@ -85,14 +83,14 @@
 	</div>
 
 	<div class="m-1 inline-block md:m-8" style="min-width: 50px; max-width: 250px;">
-		<div class="mx-2 pt-1">
+		<div class="mx-2 pt-1 text-center">
 			<div class="mb-2">
 				<svg
 					aria-hidden="true"
 					focusable="false"
 					data-prefix="fas"
 					data-icon="fire-burner"
-					class="u-inline-block fire-burner fa-w-10 fa-wrapper bg-red-100 p-3 text-red-500"
+					class="u-inline-block fire-burner fa-w-10 fa-wrapper mx-auto bg-red-100 p-3 text-red-500"
 					role="img"
 					style="border-radius: 100%; height: 4.75rem; width: 4.75rem;"
 					xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +104,7 @@
 				</svg>
 			</div>
 
-			<p class="mb-0 mt-2 font-bold">Cook Time</p>
+			<p class="mt-2 mb-0 font-bold">Cook Time</p>
 
 			{#each generateHumanReadableTimeFromMinutes(cookTimeMinutes) as time}
 				<span>{time}</span>
@@ -115,14 +113,14 @@
 	</div>
 
 	<div class="m-1 inline-block md:m-8" style="min-width: 50px; max-width: 250px;">
-		<div class="mx-2 pt-1">
+		<div class="mx-2 pt-1 text-center">
 			<div class="mb-2">
 				<svg
 					aria-hidden="true"
 					focusable="false"
 					data-prefix="fas"
 					data-icon="utensils"
-					class="u-inline-block fa-utensils fa-w-10 fa-wrapper bg-green-100 p-3 text-green-500"
+					class="u-inline-block fa-utensils fa-w-10 fa-wrapper mx-auto bg-green-100 p-3 text-green-500"
 					role="img"
 					style="border-radius: 100%; height: 4.75rem; width: 4.75rem;"
 					xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +134,7 @@
 				</svg>
 			</div>
 
-			<p class="mb-0 mt-2 font-bold">Total Time</p>
+			<p class="mt-2 mb-0 font-bold">Total Time</p>
 
 			{#each generateHumanReadableTimeFromMinutes(prepTimeMinutes + cookTimeMinutes) as time}
 				<span>{time} </span>
