@@ -3,11 +3,11 @@
 
 	const links: Array<{ href: string; label: string }> = [
 		{
-			href: "/recipes/pasta/creamy-avocado-pasta-sun-dried-tomatoes-spinach",
-			label: "Creamy Avocado Pasta with Sun-Drived Tomatoes and Spinach",
+			href: "/pasta/creamy-avocado-pasta-sun-dried-tomatoes-spinach",
+			label: "Creamy Avocado Pasta with Sun-Dried Tomatoes and Spinach",
 		},
 		{
-			href: "/recipes/pasta/stovetop-mac-and-cheese",
+			href: "/pasta/stovetop-mac-and-cheese",
 			label: "Stovetop Mac and Cheese",
 		},
 	];
